@@ -29,7 +29,7 @@ export class Ingredient extends Component {
 class Dish extends Component {
     render(){
         return (
-            <div>
+            <div className="dish"> {/* Como es una mezcla entre JS y HTML el class de la etiqueta se cambia a className */}
                 <h1>Platillo 1</h1>
                 <Ingredient/> {/* Se puede añadir un componente del archivo dentro de otro componente,
                                 Tambien se puede añadir etiquetas vacías para no generar un nuevo div */}

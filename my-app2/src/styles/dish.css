@@ -4,7 +4,17 @@ h4 {
 
 .dish{ /* Añadiendo estilo con la etiqueta className 'dish'*/
     width: 120px;
-    height: 200px;
+    height: 250px;
     border-radius: 5px; /* para redondear los bordes*/
     background-color: cadetblue;
 }
+
+/*
+Frameworks de diseño con React
+Material-UI
+Prime React
+Bootstrap
+Office UI Fabric
+Grommet
+Elemental UI
+*/

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 //'Fragment' nos permite fragmentar partes de código sin generar una nueva división
+import Button from '@mui/material/Button';
 
 //Se recomienda un componente por archivo
 //Esto solo se recomienda solo si hay pequeñas lineas de código que no se utilizarán demasiado
@@ -33,6 +34,7 @@ class Dish extends Component {
                 <h1>Platillo 1</h1>
                 <Ingredient/> {/* Se puede añadir un componente del archivo dentro de otro componente,
                                 Tambien se puede añadir etiquetas vacías para no generar un nuevo div */}
+                <Button variant="contained">Ordenar</Button>
             </div>
         );
     }

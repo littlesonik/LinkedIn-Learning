@@ -28,12 +28,26 @@ export class Ingredient extends Component {
 
 
 class Dish extends Component {
+ingredients = ["Tortilla", "Carne", "Cebolla"];
+
+contarIngredientes(){
+    return this.ingredients.length;
+}
+
     render(){
         return (
             <div className="dish"> {/* Como es una mezcla entre JS y HTML el class de la etiqueta se cambia a className */}
-                <h1>Platillo 1</h1>
-                <Ingredient/> {/* Se puede añadir un componente del archivo dentro de otro componente,
+                <h1>{this.props.platillo}</h1> {/*con 'this.props' se accede a la propiedad que definí en la clase padre*/}
+                <h3>{this.contarIngredientes()}</h3>
+
+                <ul>
+                    {this.ingredients.map(ingredient => (
+                        <li>{ingredient}</li>
+                    ))}
+                </ul>
+                {/*<Ingredient/>*/} {/* Se puede añadir un componente del archivo dentro de otro componente,
                                 Tambien se puede añadir etiquetas vacías para no generar un nuevo div */}
+                
                 <Button variant="contained">Ordenar</Button>
             </div>
         );

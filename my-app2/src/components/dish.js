@@ -35,9 +35,11 @@ contarIngredientes(){
 }
 
     render(){
+        //const { params } = this.props.match; ESTO NO ME ESTA FUNCIONANDO
         return (
             <div className="dish"> {/* Como es una mezcla entre JS y HTML el class de la etiqueta se cambia a className */}
-                <h1>{this.props.platillo}</h1> {/*con 'this.props' se accede a la propiedad que definí en la clase padre*/}
+                {/*<h1>{params.name}</h1> NO ME ESTA FUNCIONANDO*/}
+                <h1>{this.props.name}</h1> {/*con 'this.props' se accede a la propiedad que definí en la clase padre*/}
                 <h3>{this.contarIngredientes()}</h3>
 
                 <ul>

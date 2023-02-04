@@ -1,24 +1,28 @@
+import React, { Component } from "react";
 import './styles/App.css';
 import Header from "./components/header"
 import Dish /*{Flag}  se puede agregar un '* as D' para indicar que se importan todos los componentes del archivo Dish*/ from "./components/dish"
+import NewDish from './components/newDish';
 
-function App() {
-  var dish = "tacos"
-  var dishes = ["Tacos", "Ceviche", "Paella"];
+class App extends Component {
+  dish = "tacos"
+  dishes = ["Tacos", "Ceviche", "Paella"];
 
+  render() {
   return (
     <div className="App">
       <Header/>
-      <Dish platillo= {dish}/> {/*Le estamos traspansando una variable al componente Dish*/}
+      <NewDish/>
+      <Dish name= {this.dish}/> {/*Le estamos traspansando una variable al componente Dish*/}
       
-      Yo como {dish} {/* Como es JSX, para diferenciar que un codigo es de JS, hay que escribirlo entre llaves */}
+      Yo como {this.dish} {/* Como es JSX, para diferenciar que un codigo es de JS, hay que escribirlo entre llaves */}
 
       {/* si export con '*' para agregar el componente se escribiría como 'D.Flag',
       pero no se recomienda ya que es mas confuso al momento de leer el codigo*/}
 
       <ul>
         {
-          dishes.map(dish=> (
+          this.dishes.map(dish=> (
           <li>{dish}</li>
           ))
         }
@@ -26,4 +30,6 @@ function App() {
     </div>
   );
 }
+}
+
 export default App;

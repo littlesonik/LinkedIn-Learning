@@ -14,6 +14,7 @@ const Router = () => (
             <Route path = "/platillos" element = {<Dishes/>}/> {/* se hace referencia a los componentes respectivos para las diferentes rutas*/}
             <Route path = "/platillo/:name" /*en esta ruta refereciamos el componente Dish, pero tambien podemos acceder al valor que tenemos en 'name'*/ element = {<Dish/>}/>
             <Route exact path = "/paises" element = {<Countries/>}/>
+            <Route element = {<NotFound/>}/>
         </Routes>
     </BrowserRouter>
 )
